@@ -55,7 +55,7 @@ const createConversation = async (obj) => {
   const newConversation = await Conversations.create({
     id: uuid.v4(),
     title: obj.title,
-    imgUrl: obj.imgUrl,
+    imageUrl: obj.imgUrl,
     userId: obj.userId
   })
   const participant1 = await Participants.create({
