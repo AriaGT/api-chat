@@ -23,12 +23,15 @@ const findConversationById = async (id) => {
     where: {
       id: id
     },
-    include: {
+    include: [{
       model: Participants,
       include: {
         model: Users
       }
-    }
+    }, {
+      model: Messages,
+      attributes: ['id', 'userId', 'message']
+    }]
   })
   return data
 }
