@@ -12,8 +12,8 @@ const postMessage = (req, res) => {
 }
 
 const getConversationMessages = (req, res) => {
-  const id = req.params.id
-  messagesControllers.findConversationMessages(id)
+  const conversationId = req.params.conversation_id
+  messagesControllers.findConversationMessages(conversationId)
     .then(data => {
       if (data) {
         res.status(200).json(data)
