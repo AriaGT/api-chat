@@ -18,7 +18,7 @@ const getConversationMessages = (req, res) => {
       if (data) {
         res.status(200).json(data)
       } else {
-        res.status(404).json({ message: `Conversation with ID ${id} not found`)
+        res.status(404).json({ message: `Conversation with ID ${id} not found` })
       }
     )
     .catch(err => res.status(400).json({ message: err.message }))
