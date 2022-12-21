@@ -30,8 +30,7 @@ const findConversationById = async (id) => {
         model: Users
       }
     }, {
-      model: Messages,
-      attributes: ['id', 'userId', 'message']
+      model: Messages
     }]
   })
   return data
