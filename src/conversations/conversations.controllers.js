@@ -33,7 +33,6 @@ const findConversationById = async (id) => {
     }, {
       model: Messages
     }]
-  })
   return data
 }
 
