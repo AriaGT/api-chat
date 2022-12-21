@@ -11,7 +11,15 @@ const createMessage = async (obj) => {
   return data
 }
 
+const findConversationMessages = async (id) => {
+  const data = await Messages.findAll({
+    where: {
+      id: id
+    }
+  })
+}
 
 module.exports = {
-  createMessage
+  createMessage,
+  findConversationMessages
 }
