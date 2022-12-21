@@ -17,7 +17,8 @@ const findMyConversations = async (id) => {
     }, {
       model: Messages
     }]
-  return data
+  })
+    return data
 }
 
 const findConversationById = async (id) => {
@@ -33,7 +34,8 @@ const findConversationById = async (id) => {
     }, {
       model: Messages
     }]
-  return data
+  })
+    return data
 }
 
 const updateConversation = async (id, obj) => {
