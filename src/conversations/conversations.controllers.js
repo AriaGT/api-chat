@@ -9,13 +9,14 @@ const findMyConversations = async (id) => {
     where: {
       userId: id
     },
-    include: {
+    include: [{
       model: Participants,
       include: {
         model: Users
       }
-    }
-  })
+    }, {
+      model: Messages
+    }]
   return data
 }
 
