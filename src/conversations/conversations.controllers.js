@@ -6,11 +6,11 @@ const Messages = require('../models/messages.models')
 
 const findMyConversations = async (id) => {
   const data = await Conversations.findAll({
-    where: {
-      userId: id
-    },
     include: [{
       model: Participants,
+      where: {
+        userId: id
+      },
       include: {
         model: Users
       }
